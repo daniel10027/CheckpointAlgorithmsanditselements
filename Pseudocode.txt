@@ -1,0 +1,26 @@
+Initialize:
+  length ← 0
+  words ← 0
+  vowels ← 0
+  inWord ← false
+
+Read characters one by one:
+  REPEAT
+    Read character c
+    length ← length + 1
+
+    IF c is a vowel (a, e, i, o, u or A, E, I, O, U)
+      vowels ← vowels + 1
+
+    IF c is a space THEN
+      inWord ← false
+    ELSE IF NOT inWord AND c ≠ '.' THEN
+      inWord ← true
+      words ← words + 1
+
+  UNTIL c = '.'
+
+Display:
+  length
+  words
+  vowels
